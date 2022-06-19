@@ -1,1 +1,1 @@
-<img src="assets\gif\anketa.gif" alt="anketa" />
+<img src="assets\gif\anketa.gif" alt="anketa" height="300"/>
