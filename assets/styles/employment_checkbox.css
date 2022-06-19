@@ -1,0 +1,24 @@
+@media (min-width:360px) and (max-width:1279px){
+    .checkbox-container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+}
+@media (min-width:1200px){
+    .checkbox-container {
+        min-width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+.form-job_flex{
+    padding: 5% 5%;
+    max-width: 40vw;
+    display: flex;
+    justify-content: center;
+
+}
+}

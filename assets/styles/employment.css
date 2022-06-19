@@ -1,0 +1,147 @@
+
+.toggle__button-yes-no {
+	display: block;
+	position: absolute;
+	width: var(--toggle-width);
+	height: var(--toggle-height);
+	margin-top: 8vh;
+	margin-left: 12%;
+	border: 1px solid var(--toggle-checked-font-color);
+	border-radius: var(--general-border-radius);
+	cursor: pointer;
+	line-height: 19px;
+	font-size: 1rem;
+	font-family: var(--toggle-font-family);
+}
+.toggle__button-yes-no input {
+	display: none;
+}
+.toggle__button-yes-no .button-yes-no__slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s ease-in-out;
+}
+.toggle__button-yes-no .button-yes-no__slider::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 49.9%;
+	height: calc(var(--toggle-height) - 0.2vh);
+	border: 1px solid var(--toggle-checked-font-color);
+	transition: all 0.4s ease-in-out;
+	background: url(../images/toggle_switch.png), 
+	linear-gradient(225deg, rgba(146, 213, 241, 0.01) 0%, rgba(146, 213, 241, 0.1) 100%);
+	background-size: cover;
+	box-shadow: 
+	inset 0px 4px 8px rgba(146, 213, 241, 0.04), inset 0px  0px 2px rgba(146, 213, 241, 0.06), inset 0px 0px 1px rgba(146, 213, 241, 0.04);
+	backdrop-filter: blur(6px);
+	border-radius: var(--general-border-radius);
+	z-index: -1;
+}
+.toggle__button-yes-no input:checked + .button-yes-no__slider::before {
+	transform: translateX(calc(var(--toggle-width) / 2));
+}
+.toggle__button-yes-no input:checked + .button-yes-no__slider::after {
+	backdrop-filter: blur(1px);
+	border-radius: var(--general-border-radius);
+}
+.toggle__button-yes-no .button-yes-no__labels {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s ease-in-out;
+}
+.button-yes-no__switch-off {
+	color: var(--toggle-checked-font-color);
+	text-shadow: 0px 0px 10px var(--toggle-checked-font-color);
+	}
+.button-yes-no__switch-on {
+	color: var(--main-font-color);
+	}
+.toggle__button-yes-no input:checked ~ .button-yes-no__labels > .button-yes-no__switch-off {
+	color: var(--main-font-color);
+	text-shadow: none;
+	}
+.toggle__button-yes-no input:checked ~ .button-yes-no__labels > .button-yes-no__switch-on {
+	color: var(--toggle-checked-font-color);
+	text-shadow: 0px 0px 10px var(--toggle-checked-font-color);
+	}
+.footer__button-question-icon {
+	display: flex;
+	min-height: 39vh;
+	margin-left: 10vw;
+	justify-content: center;
+	align-items: flex-end;
+}
+.glossy-button {
+    position: absolute;
+    margin: 0;
+}
+.question-icon__sign {
+	position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+	.toggle__button-yes-no {
+		width: 60vw;
+		height: 10vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        font-size: 1.5rem;
+	}
+	.toggle__button-yes-no .button-yes-no__slider::before {
+		width: 30vw;
+		height: 10vw;
+	}
+	.toggle__button-yes-no input:checked + .button-yes-no__slider::before {
+		transform: translateX(30vw);
+	}
+	.question-icon__sign {
+		right: 2%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    .toggle__button-yes-no {
+		width: 60vw;
+		height: 10vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        font-size: 2rem;
+	}
+	.toggle__button-yes-no .button-yes-no__slider::before {
+		width: 30vw;
+		height: 10vw;
+	}
+	.toggle__button-yes-no input:checked + .button-yes-no__slider::before {
+		transform: translateX(30vw);
+	}
+	.question-icon__sign {
+		right: 2%;
+	}
+}
+@media screen and (min-width: 1280px) {
+    .toggle__button-yes-no {
+		width: 40vw;
+		height: 8vw;
+        margin-left: 30vw;
+        margin-right: 20vw;
+        font-size: 2rem;
+	}
+	.toggle__button-yes-no .button-yes-no__slider::before {
+		width: 20vw;
+		height: 8vw;
+	}
+	.toggle__button-yes-no input:checked + .button-yes-no__slider::before {
+		transform: translateX(20vw);
+	}
+	.question-icon__sign {
+		right: 2%;
+	}
+}	

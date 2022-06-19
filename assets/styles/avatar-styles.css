@@ -1,0 +1,315 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.substrate {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(146, 212, 241, 0.702) 20%, rgba(146, 212, 241, 0) 60%, rgba(146, 212, 241, 0) 20%);
+    clip-path: polygon(37% 42%, 63% 42%, 80% 34%, 100% 34%, 100% 100%, 0 100%, 0 34%, 20% 34%);
+    z-index: -2;
+}
+
+.header {
+    margin: 1% 2%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-back-button__wrap {
+    position: absolute;
+    left: 2%;
+}
+
+.step-back-button {
+    position: relative;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    box-shadow:
+        0.2px 0.2px 0.2px 0.2px #92d4f15d,
+        2px 1px 2px 2px #92d4f11f;
+    border-radius: 50px;
+    transition: transform 0.5s;
+}
+
+.step-back-button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: -2.5px;
+    height: 35px;
+    width: 45px;
+    background-image: url('../images/avatar/vector_arrow_back.svg');
+    transform: scale(0.9);
+}
+
+.title {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.75em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    width: 70%;
+    max-width: 300px;
+}
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 25vh;
+}
+
+.body-parts {
+    display: inline-block;
+    width: 100%;
+    min-height: 5rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.body-parts__button {
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 2em;
+    width: 6em;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #92D5F1;
+    background-color: #92d4f125;
+    border-radius: 3em;
+    display: inline-block;
+    transition: transform 0.5s;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.body-parts__button:focus {
+    background-color: #92d4f1;
+    transform: scale(1.05);
+}
+
+.colors {
+    display: grid;
+    gap: 10%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.colors__button {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    max-width: 60px;
+    height: 40px;
+    max-height: 60px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.colors__button:focus {
+    transform: scale(1.2);
+    box-shadow:
+        inset 0 3px 2px hsla(0, 0%, 100%, 0.308),
+        inset 0 -1px 2px hsla(0, 0%, 100%, 0.308),
+        0 1px 2px hsla(0, 0%, 0%, 0.414);
+}
+
+.colors__button_skincolor1 {
+    background-color: #3D2E24;
+}
+
+.colors__button_skincolor2 {
+    background-color: #5C4231;
+}
+
+.colors__button_skincolor3 {
+    background-color: #74573E;
+}
+
+.colors__button_skincolor4 {
+    background-color: #AD8260;
+}
+
+.colors__button_skincolor5 {
+    background-color: #D3A783;
+}
+
+.colors__button_skincolor6 {
+    background-color: #E5BA98;
+}
+
+.colors__button_skincolor7 {
+    background-color: #EECBAD;
+}
+
+.colors__button_skincolor8 {
+    background-color: #F0D4B9;
+}
+
+.colors__button_yellow {
+    background-color: #FFEF77;
+}
+
+.colors__button_orange {
+    background-color: #FFB44F;
+}
+
+.colors__button_pink {
+    background-color: #E9B0F3;
+}
+
+.colors__button_blue {
+    background-color: #92D5F1;
+}
+
+.colors__button_purple {
+    background-color: #794CEC;
+}
+
+.buttons {
+    position: relative;
+    bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.buttons_gap{
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 769px) {
+
+    .avatar,
+    .body-parts,
+    .colors,
+    .buttons {
+        max-width: 479px;
+    }
+
+    .body-parts {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+    }
+
+    .colors {
+        display: grid;
+        gap: 10%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 3%;
+    }
+
+    .substrate {
+        clip-path: polygon(37% 46%, 63% 46%, 73% 34%, 100% 34%, 100% 100%, 0 100%, 0 34%, 27% 34%);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .avatar,
+    .body-parts,
+    .colors,
+    .buttons {
+        max-width: 479px;
+    }
+
+    .body-parts {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+    }
+
+.avatar{
+    margin: 0;
+}
+
+    .colors {
+        display: grid;
+        gap: 10%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 3%;
+    }
+
+    .buttons {
+        display: grid;
+        gap: 10%;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .substrate {
+        clip-path: polygon(37% 46%, 63% 46%, 73% 34%, 100% 34%, 100% 100%, 0 100%, 0 34%, 27% 34%);
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .avatar,
+    .body-parts,
+    .colors,
+    .buttons {
+        max-width: 479px;
+    }
+
+    .body-parts {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+    }
+
+.avatar{
+    margin: 0;
+}
+
+    .colors {
+        display: grid;
+        gap: 10%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 3%;
+    }
+
+    .buttons {
+        display: grid;
+        gap: 10%;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .substrate {
+        clip-path: polygon(44% 46%, 56% 46%, 61% 34%, 100% 34%, 100% 100%, 0 100%, 0 34%, 39% 34%);
+    }
+}
