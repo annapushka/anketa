@@ -13,6 +13,7 @@ Namely, the part where the new user registers and fills in their experience data
 
 ## Result
 
+[Click me](https://annapushka.github.io/anketa/)
 <p><img src="assets\gif\anketa.gif" alt="anketa"/></p>
 
 
